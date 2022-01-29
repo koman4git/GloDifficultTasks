@@ -6,7 +6,6 @@ let result = 1;
 for (let i = 0; i < arr.length; i++) {
   result *= + arr[i];
 }
-console.log(result);
 
 result **= 3;
 console.log(result);
