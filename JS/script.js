@@ -13,7 +13,7 @@ if (lang === "ru") {
 } else {
   console.log("Вы не ввели ни одно из предложенных значений! Попробуйте заново");
 }
-//вывод через switch
+//вывод через оператор switch
 switch(true) {
   case lang === "ru":
     console.log(newArr[0].join());
