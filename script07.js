@@ -2,7 +2,7 @@
 
 const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
-for (let i = 0, len = week.length; i < len; i++) {
+for (let i = 0; i < week.length; i++) {
     let html = week[i],
         myDate = new Date(),
         currentDay = myDate.getDate();
