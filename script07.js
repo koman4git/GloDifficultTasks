@@ -1,20 +1,22 @@
 'use strict';
 
-const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+const week = ['Воскресенье','Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+let myDate = new Date();
+let curDay = myDate.getDay();
 
 for (let i = 0; i < week.length; i++) {
-    let html = week[i],
-        myDate = new Date(),
-        currentDay = myDate.getDate();
-
-    if (i == currentDay) {
-      html = html.bold();
+    if (i === curDay) {
+     week[i] = week[i].bold();
     }
-    else if (i > 4 && i < 7 && i !== currentDay) {
-      html = html.italics();
+    if (i === 6 || i === 0) {
+      week[i] = week[i].italics();
     }
-    
+    if (i === curDay && i === 6 || i === 0) {
+      week[i] = week[i].bold();
+      week[i] = week[i].italics();
+    }
     const div = document.createElement('div');
-    div.innerHTML = html;
+    div.innerHTML = week[i];
     document.body.appendChild(div);
+    
 }
